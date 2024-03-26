@@ -1,14 +1,6 @@
-# nation_bennys
-- FIVEM Mechanic Menu
-- to Translate using your language, go to script.js and replace each words.
-![alt text](https://i.imgur.com/wpr9IVh.png)
-- Info: a lot of people are requesting this, so here is my version, this is actually made few months ago now i am sharing it.
+# nation_bennys_updated
+- Mechanic menu for ESX
+- to Translate using your language, go to script.js 
+- Info: i'm just upgrading from an old esx version, now it works. But there are no images, they are just missing from the original fi
 
-- All Events needed are converted from VRPEX to ESX (TESTED v1 final)
-
-- if you found a bug i will fixed it when i have a time:
-
-- Added Society Money Option at config: Mechanic can earn money from the script to their society money.
-- Money being used is either bank or
-
-- Dependencies: Esx Datastore, Mysql, esx_society, progressbar
+- **Dependencies:** Esx Datastore, Mysql, esx_society, progressbar
