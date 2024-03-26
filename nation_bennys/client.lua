@@ -1,8 +1,9 @@
-ESX	= nil
+ESX = exports["es_extended"]:getSharedObject()
+
+
 NOOBKING = {}
 Citizen.CreateThread(function()
 	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(0)
 	end
 end)
@@ -86,7 +87,7 @@ Citizen.CreateThread(function()
 			local playercoords = GetEntityCoords(PlayerPedId())
 			local distance = #(playercoords - bennys)
 			if distance < 2 then
-				drawTxt("Press [E] to Open Mechanic Menu",4,0.5,0.93,0.50,255,255,255,180)
+				drawTxt("Premi [E] per aprire il Menù Meccanico",10,0.5,8,0.50,255,255,255,180)
 				if IsControlJustPressed(0,38) then
 					ESX.TriggerServerCallback('nation:checkPermission', function(data)
 						if data and config.mechaniconly then
@@ -155,7 +156,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
--- VRP SHIT FUNC
+-- VRP FUNC
 
 function playAnim(animDict,name)
 	RequestAnimDict(animDict)
@@ -184,7 +185,7 @@ end)
 
 RegisterNetEvent("Notify")
 AddEventHandler("Notify", function(a,b)
-	ESX.ShowAdvancedNotification('Nation Penis', a, b, 'CHAR_CARSITE', 1)
+	ESX.ShowAdvancedNotification('Meccanico', a, b, 'CHAR_CARSITE', 1)
 end)
 
 RegisterNUICallback("close",function(data)
@@ -219,7 +220,7 @@ RegisterNUICallback("pagar",function(data)
 			if not IsPedInAnyVehicle(PlayerPedId()) then
 				playAnim("mini@repair","fixing_a_player")
 			end
-			TriggerEvent("progress",10000,"Installing")
+			TriggerEvent("progress",10000,"Installando")
 			Wait(10000)
 			stopAnim(false)
 			myveh = ESX.Game.GetVehicleProperties(vehicle)
@@ -242,7 +243,7 @@ RegisterNUICallback("callbacks",function(data)
 			if not IsPedInAnyVehicle(PlayerPedId()) then
 				playAnim("mini@repair","fixing_a_player")
 			end
-			TriggerEvent("progress",10000,"Repairing")
+			TriggerEvent("progress",10000,"Riparando")
 			Wait(10000)
 			SetVehicleFixed(vehicle)
 			SetVehicleDirtLevel(vehicle,0.0)
@@ -251,7 +252,7 @@ RegisterNUICallback("callbacks",function(data)
 			SetVehicleOnGroundProperly(vehicle)
 			myveh.damage = 0.0
 			stopAnim(false)
-			TriggerEvent("Notify","sucesso","Veículo reparado com <b>sucesso</b>.",7000)
+			TriggerEvent("Notify","sucesso","Veicolo riparato con <b>successo</b>.",7000)
 				SendNUIMessage({ action = "repair" })
 			block = false
 		elseif data.type == "cor-primaria" or data.type == "cor-secundaria" then
@@ -878,7 +879,7 @@ function isVehicleTooFar(veh)
 			local distance = #(playercoords - vehcoords)
 			if distance > 7 then
 				NOOBKING.closeNui()
-				TriggerEvent("Notify","aviso","Você se afastou muito do veículo.",7000)
+				TriggerEvent("Notify","aviso","Devi avvicinarti al veicolo",7000)
 			end
 			Citizen.Wait(500)
 		end

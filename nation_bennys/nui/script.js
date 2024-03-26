@@ -1,38 +1,38 @@
 
     function translation() {
 		console.log('translation')
-		document.getElementById("cam").innerHTML = 'Press <span style="color: rgb(241, 66, 66);">h/q</span> to enable/disable fixed camera';
-		document.getElementById("pagar").innerHTML = 'Cost &nbsp;&nbsp;&nbsp;<i class="fas fa-hand-holding-usd"></i>';
-		document.getElementById("sair").innerHTML = 'Close &nbsp;&nbsp;&nbsp;<i class="fas fa-window-close"></i>';
+		document.getElementById("cam").innerHTML = 'Premi <span style="color: rgb(241, 66, 66);">H/Q</span> per muovere la camera';
+		document.getElementById("pagar").innerHTML = 'Paga &nbsp;&nbsp;&nbsp;<i class="fas fa-hand-holding-usd"></i>';
+		document.getElementById("sair").innerHTML = 'Chiudi &nbsp;&nbsp;&nbsp;<i class="fas fa-window-close"></i>';
 		//document.getElementById("aerofólio > textbox").innerHTML = 'Close&nbsp;&nbsp;&nbsp;<i class="fas fa-window-close"></i>';
 		$('#aerofólio > .textbox > span').html('Spoiler');
-		$('#parachoque-dianteiro > .textbox > span').html('Front Bumper');
-		$('#parachoque-traseiro > .textbox > span').html('Rear Bumper');
-		$('#saias > .textbox > span').html('Side Skirt');
-		$('#escapamento > .textbox > span').html('Muffler');
-		$('#chassi > .textbox > span').html('Chasis');
-		$('#grelha > .textbox > span').html('Grille');
-		$('#capô > .textbox > span').html('Hood');
-		$('#para-lama > .textbox > span').html('Fender');
-		$('#teto > .textbox > span').html('Roof');
-		$('#motor > .textbox > span').html('Engine');
-		$('#freios > .textbox > span').html('Brakes');
-		$('#transmissão > .textbox > span').html('Trannsmition');
-		$('#buzina > .textbox > span').html('Horn');
-		$('#suspensão > .textbox > span').html('Suspension');
-		$('#blindagem > .textbox > span').html('Armor');
+		$('#parachoque-dianteiro > .textbox > span').html('Paraurti Avanti');
+		$('#parachoque-traseiro > .textbox > span').html('Paraurti Dietro');
+		$('#saias > .textbox > span').html('Minigonne');
+		$('#escapamento > .textbox > span').html('Marmitta');
+		$('#chassi > .textbox > span').html('Telaio');
+		$('#grelha > .textbox > span').html('Griglia');
+		$('#capô > .textbox > span').html('Cofano');
+		$('#para-lama > .textbox > span').html('Parafango');
+		$('#teto > .textbox > span').html('Tetto');
+		$('#motor > .textbox > span').html('Motore');
+		$('#freios > .textbox > span').html('Freni');
+		$('#transmissão > .textbox > span').html('Trasmissione');
+		$('#buzina > .textbox > span').html('Clacson');
+		$('#suspensão > .textbox > span').html('Sospensione');
+		$('#blindagem > .textbox > span').html('Armatura');
 		$('#turbo > .textbox > span').html('Turbo');
-		$('#interior > .textbox > span').html('Interior');
-		$('#farol > .textbox > span').html('Headlights');
-		$('#decal > .textbox > span').html('Decals');
-		$('#rodas > .textbox > span').html('Wheels');
-		$('#placa > .textbox > span').html('Plate');
-		$('#neon > .textbox > span').html('Neon Lights');
-		$('#pintura > .textbox > span').html('Paint');
-		$('#vidro > .textbox > span').html('Mirrors');
+		$('#interior > .textbox > span').html('Interni');
+		$('#farol > .textbox > span').html('Fari');
+		$('#decal > .textbox > span').html('Decalcomanie');
+		$('#rodas > .textbox > span').html('Ruote');
+		$('#placa > .textbox > span').html('Targa');
+		$('#neon > .textbox > span').html('Luci Neon');
+		$('#pintura > .textbox > span').html('Pittura');
+		$('#vidro > .textbox > span').html('Vetri');
 		
 		//inner
-		$('#titulo').html('Select Upgrade');
+		$('#titulo').html('Selezione Modifica');
 		$('#aerofólio-0 > span').html('Default');
 		$('#parachoque-dianteiro-0 > span').html('Default');
 		$('#parachoque-traseiro-0 > span').html('Default');
@@ -140,7 +140,6 @@
 		var yourCodeToBeCalled = function(){
 		}
 		
-		var img = '<img src="https://rare5m.co/data/avatars/m/32/32737.jpg?1619695016">';
 		$(document).ready(function () {
 			document.getElementById("translator").innerHTML = "";
 			document.body.innerHTML.replace('para liberar a câmera', 'hi');
@@ -151,7 +150,7 @@
 					// $('.titulo').empty();
 					// loadJS('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', yourCodeToBeCalled, document.body);
 					googleTranslateElementInit()
-					console.log("noobking was here")
+					console.log("NoobKing was here, and BBisWicked updated")
 				}
 				if (event.action == 'hideMenu') {
 					window.location.reload(false);

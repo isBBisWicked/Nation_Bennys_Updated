@@ -19,3 +19,6 @@ files {
 	"nui/script.js",
 	"nui/css.css"
 }
+
+-- New Esx Update
+shared_script '@es_extended/imports.lua'

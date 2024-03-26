@@ -1,5 +1,4 @@
-ESX = nil
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+ESX = exports["es_extended"]:getSharedObject()
 local using_bennys = {}
 
 ESX.RegisterServerCallback('nation:checkPermission',function(source, cb)
@@ -9,7 +8,7 @@ ESX.RegisterServerCallback('nation:checkPermission',function(source, cb)
         cb(true)
     elseif config.mechaniconly then
         cb(false)
-        TriggerClientEvent("Notify",source,"negado","Only Mechanic can access this shit",7000)
+        TriggerClientEvent("Notify",source,"Negato","Non sei un meccanico",7000)
     elseif not config.mechaniconly then
         cb(true)
     end
@@ -32,7 +31,7 @@ ESX.RegisterServerCallback('nation:checkPayment',function(source, cb, amount)
                 societyAccount.addMoney(amount)
         end
         xPlayer.removeAccountMoney('bank', amount)
-        TriggerClientEvent("Notify",source,"sucesso","Upgrade <b>Succeess Faggot</b><br>Total Cost <b>$"..tonumber(amount).." $ <b>.",7000)
+        TriggerClientEvent("Notify",source,"successo","Grande <b>Ottime modifche</b><br>costo <b>$"..tonumber(amount).." $ <b>.",7000)
         cb(true)
     elseif not config.mechaniconly and cash >= amount then
         if config.societymoney then
@@ -46,7 +45,7 @@ ESX.RegisterServerCallback('nation:checkPayment',function(source, cb, amount)
                 societyAccount.addMoney(amount)
         end
         xPlayer.removeMoney(amount)
-        TriggerClientEvent("Notify",source,"sucesso","Upgrade <b>Succeess</b><br>Total Cost <b>$"..tonumber(amount).." $ <b>.",7000)
+        TriggerClientEvent("Notify",source,"sucesso","Modifica riuscita <b>con un</b><br>Costo totale <b>$"..tonumber(amount).." $ <b>.",7000)
         cb(true)
     elseif config.mechaniconly and bankey >= amount or config.mechaniconly and cash >= amount then
         if config.societymoney then
@@ -58,21 +57,21 @@ ESX.RegisterServerCallback('nation:checkPayment',function(source, cb, amount)
                 societyAccount = account
             end)
             societyAccount.removeMoney(amount)
-            TriggerClientEvent("Notify",source,"sucesso","Upgrade <b>Succeess Faggot</b><br>Total Cost <b>$"..tonumber(amount).." $ <b>.",7000)
+            TriggerClientEvent("Notify",source,"sucesso","Grande, <b>Modifiche effettuate</b><br>Costo totale <b>$"..tonumber(amount).." $ <b>.",7000)
             cb(true)
         else
             if bankey >= amount then
                 xPlayer.removeAccountMoney('bank', amount)
-                TriggerClientEvent("Notify",source,"sucesso","Upgrade <b>Succeess Faggot</b><br>Total Cost <b>$"..tonumber(amount).." $ <b>.",7000)
+                TriggerClientEvent("Notify",source,"sucesso","Grande, <b>Modifiche effettuate</b><br>Costo totale <b>$"..tonumber(amount).." $ <b>.",7000)
                 cb(true)
             elseif cash >= amount then
                 xPlayer.removeMoney(amount)
-                TriggerClientEvent("Notify",source,"sucesso","Upgrade <b>Succeess</b><br>Total Cost <b>$"..tonumber(amount).." $ <b>.",7000)
+                TriggerClientEvent("Notify",source,"sucesso","Grande, <b>Modifiche effettuate</b><br>Costo totale $"..tonumber(amount).." $ <b>.",7000)
                 cb(true)
             end
         end
     else
-        TriggerClientEvent("Notify",source,"negado","You dont have a freaking money.",7000)
+        TriggerClientEvent("Notify",source,"negado","Non hai soldi",7000)
         cb(false)
     end
 end)

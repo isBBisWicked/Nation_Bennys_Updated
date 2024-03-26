@@ -316,7 +316,7 @@ config.locais = {
 config.societymoney = true
 config.society_name = 'society_mechanic' -- will work only if mechaniconly is false
 
-config.mechaniconly = false -- if false other player/job can use the upgrade menu.
+config.mechaniconly = true -- if false other player/job can use the upgrade menu.
 config.permissao = 	"mechanic"
 
 config.use_vehlist = true
